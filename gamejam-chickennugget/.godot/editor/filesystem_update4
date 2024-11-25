@@ -1,4 +1,6 @@
 res://MainGame/Scenes/title_screen.tscn
-res://Rylan/testing_envRylan.tscn
 res://MainGame/Global/audio_manager.tscn
+res://MainGame/Player/main_player.tscn
 res://MainGame/Scenes/Lobby.tscn
+res://MainGame/Global/audio_manager.gd
+res://MainGame/Player/main_player.gd

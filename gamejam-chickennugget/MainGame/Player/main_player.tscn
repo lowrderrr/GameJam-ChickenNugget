@@ -265,3 +265,5 @@ texture_filter = 1
 position = Vector2(57, -50)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("8_swomn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

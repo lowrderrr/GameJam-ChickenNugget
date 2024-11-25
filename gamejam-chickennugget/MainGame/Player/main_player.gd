@@ -69,9 +69,13 @@ func _physics_process(delta):
 		velocity = velocity.normalized() * SPEED	
 	
 	if ((directionX || directionY) && !showMap && !shop):
+		#if !$AudioStreamPlayer2D.playing:
+			#AudioManager.play_local($AudioStreamPlayer2D, "Test")
 		move_and_slide()
 	
 	if !directionX && !directionY:
+		#if $AudioStreamPlayer2D.playing:
+			#AudioManager.stop_local($AudioStreamPlayer2D)
 		#print("Idling")
 		# 0 is up, 1 is down, 2 is right, 3 is left
 		if (characterDirection == 0):

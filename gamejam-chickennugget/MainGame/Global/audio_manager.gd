@@ -2,18 +2,19 @@ extends Node
 
 #@onready var main_menu: AudioStreamPlayer = $MainMenu
 #@onready var button: AudioStreamPlayer = $Button
-var get_audio
-var dic_audio = {}
+
+var json_audio
+var audios = {}
 func _ready() -> void:
-	get_audio = Utils.get_JSON("res://MainGame/Global/JSON/AudioPath.json")
-	for i in get_audio:
-		dic_audio[i] = load(get_audio[i])
-	play("Test")
+	json_audio = Utils.get_JSON("res://MainGame/Global/JSON/AudioPath.json")
+	for i in json_audio:
+		audios[i] = load(json_audio[i])
 	
-func play(name_audio):
-	#Test
-	$Sound.stream = dic_audio[name_audio]
-	$Sound.play()
-		
-func stop():
-	$Sound.stop()
+func play_local(audio_stream: AudioStreamPlayer2D, audio_name):
+	if !audio_stream.playing:
+		audio_stream.stream = audios[audio_name]
+		audio_stream.play()
+
+func stop_local(audio_stream: AudioStreamPlayer2D):
+	if audio_stream.playing:
+		audio_stream.stop()
