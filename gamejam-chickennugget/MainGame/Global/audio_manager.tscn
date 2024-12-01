@@ -4,5 +4,3 @@
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_magru")
-
-[node name="Sound" type="AudioStreamPlayer" parent="."]
