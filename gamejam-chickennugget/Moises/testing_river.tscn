@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmxoj5khiqwk1"]
+
+[ext_resource type="Script" path="res://Moises/testing_river.gd" id="1_f3lmf"]
+[ext_resource type="PackedScene" uid="uid://cj7alxanv71ru" path="res://Moises/testing.tscn" id="2_jow1o"]
+
+[sub_resource type="Curve2D" id="Curve2D_h8r5u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 82.5873, 68.2579, 0, 0, 0, 0, 144.188, 110.396, 1.16766, -61.5673, -1.16766, 61.5673, 161.882, 167.704, 10.5089, -15.0164, -10.5089, 15.0164, 112.732, 225.855, -12.8443, -36.0394, 12.8443, 36.0394, 84.5533, 279.792, -18.6826, -7.5082, 18.6826, 7.5082, 221.517, 327.83, -28.0238, -63.0689, 28.0238, 63.0689, 296.224, 385.138, 28.0238, 45.0492, -28.0238, -45.0492, 285.739, 431.491, 16.3472, -9.00984, -16.3472, 9.00984, 232.002, 463.516, -35.0298, -54.0591, 35.0298, 54.0591, 193.337, 557.906, 0, 0, 0, 0, 279.841, 578.975, 0, 0, 0, 0, 344.063, 580.66, 0, 0, 0, 0, 423.357, 598.358, 0, 0, 0, 0, 458.09, 616.057)
+}
+point_count = 14
+
+[node name="TestingRiver" type="Node2D"]
+script = ExtResource("1_f3lmf")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(250, 7)
+scale = Vector2(0.580265, 0.936476)
+curve = SubResource("Curve2D_h8r5u")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(82.5873, 68.2579)
+rotation = 0.599943
+rotates = false
+
+[node name="MainPlayer" parent="." instance=ExtResource("2_jow1o")]
