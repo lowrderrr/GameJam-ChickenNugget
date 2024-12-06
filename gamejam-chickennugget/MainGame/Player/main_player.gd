@@ -96,3 +96,11 @@ func _on_mines_or_spawn_area_thought_bubble(thinking) -> void:
 		thoughtBubble.play()
 	else:
 		thoughtBubble.stop()
+
+
+
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if(area.name == "Item"):
+		print("yur")
