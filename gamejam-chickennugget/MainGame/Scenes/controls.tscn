@@ -73,7 +73,7 @@ offset_right = 588.0
 offset_bottom = 278.0
 theme_override_fonts/font = SubResource("SystemFont_m4v5a")
 theme_override_font_sizes/font_size = 30
-text = "MINING [E]"
+text = "Panning [E]"
 
 [node name="Label4" type="Label" parent="."]
 layout_mode = 0

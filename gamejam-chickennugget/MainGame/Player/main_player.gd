@@ -25,13 +25,13 @@ func _physics_process(delta):
 	elif thoughtBubble.frame == 0:
 		$CoalItem.visible = false
 		
-	$PointLight2D.energy = 0.5 + GlobalVars.addedLight
-	if Input.is_action_just_pressed("Map") && showMap == false:
-		showMap = true
-		$Camera2D/Map.visible = true
-	elif Input.is_action_just_pressed("Map") && showMap:
-		showMap = false
-		$Camera2D/Map.visible = false
+	#$PointLight2D.energy = 0.5 + GlobalVars.addedLight
+	#if Input.is_action_just_pressed("Map") && showMap == false:
+		#showMap = true
+		#$Camera2D/Map.visible = true
+	#elif Input.is_action_just_pressed("Map") && showMap:
+		#showMap = false
+		#$Camera2D/Map.visible = false
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
