@@ -5,15 +5,16 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 var coalArr = []
 var coalVisible = 0
-@onready var coal_amount_min: Label = $MainPlayer/Camera2D/Quota/CoalAmount
+@onready var coal_amount_min: Label = $Control/Quota/CoalAmount
 
-@onready var label: Label = $MainPlayer/Camera2D/Time/Label
-@onready var timer: Timer = $MainPlayer/Camera2D/Time/Timer
+@onready var label: Label = $Control/Time/Label
+@onready var timer: Timer = $Control/Time/Timer
 var minute = 0
 var second = 0
 
 #Note that the "MineralList" is all invisible
 func _ready():
+	$Camera2D.make_current()
 	if GlobalVars.minCoal > 10: #Decrease the min coal required to spawn
 		GlobalVars.minCoal = 60 - GlobalVars.level * 5
 	else:
@@ -34,30 +35,30 @@ func _ready():
 	else:
 		timer.wait_time = 60
 		GlobalVars.timerLevel = timer.wait_time
-	$MainPlayer/Camera2D/Quota/Level.text = str("Level: ")+str(GlobalVars.level + 1) #Display Level
+	$Control/Quota/Level.text = str("Level: ")+str(GlobalVars.level + 1) #Display Level
 		
 	timer.start()
 	#Summon rocks
 	var coal_exist_temp = 0
-	for child in mineral_list.get_children():
-		var random_number = rng.randi_range(0, 10)
-		#Make child visible if num in range
-		if child.name.begins_with("Coal"):
-			coalArr.append(child)
-		if random_number <= 4 && random_number >= 0:
-			child.visible = true
-			if child.name.begins_with("Coal"):
-				coalVisible += 1
-				coal_exist_temp += 1 #temp
-				coalArr.pop_back()
-	if coalVisible < GlobalVars.minCoal:
-		var req = GlobalVars.minCoal - coalVisible
-		for i in range(0, req):
-			var summonPls = rng.randi_range(0, len(coalArr) - 1)
-			coal_exist_temp += 1 #temp
-			coalArr[summonPls].visible = true
-			coalArr.pop_at(summonPls)
-	print("Coal that exist in the world: "+str(coal_exist_temp)+"/"+str(GlobalVars.minCoal))
+	#for child in mineral_list.get_children():
+		#var random_number = rng.randi_range(0, 10)
+		##Make child visible if num in range
+		#if child.name.begins_with("Coal"):
+			#coalArr.append(child)
+		#if random_number <= 4 && random_number >= 0:
+			#child.visible = true
+			#if child.name.begins_with("Coal"):
+				#coalVisible += 1
+				#coal_exist_temp += 1 #temp
+				#coalArr.pop_back()
+	#if coalVisible < GlobalVars.minCoal:
+		#var req = GlobalVars.minCoal - coalVisible
+		#for i in range(0, req):
+			#var summonPls = rng.randi_range(0, len(coalArr) - 1)
+			#coal_exist_temp += 1 #temp
+			#coalArr[summonPls].visible = true
+			#coalArr.pop_at(summonPls)
+	#print("Coal that exist in the world: "+str(coal_exist_temp)+"/"+str(GlobalVars.minCoal))
 
 func time_left_countdown():
 	var time_left = timer.time_left
@@ -67,14 +68,14 @@ func time_left_countdown():
 
 func _process(delta):
 	#Show the stats levels
-	$MainPlayer/Camera2D/Time/CoinAmount.text = str(GlobalVars.coinsTotal)
-	$MainPlayer/Camera2D/Time/BootAmount.text = str(GlobalVars.boughtSpeed + 1)
-	$MainPlayer/Camera2D/Time/LampAmount.text = str(GlobalVars.boughtLight + 1)
-	$MainPlayer/Camera2D/Time/PickaxeAmount.text = str(GlobalVars.boughtMining + 1)
+	$Control/Time/CoinAmount.text = str(GlobalVars.coinsTotal)
+	$Control/Time/BootAmount.text = str(GlobalVars.boughtSpeed + 1)
+	$Control/Time/LampAmount.text = str(GlobalVars.boughtLight + 1)
+	$Control/Time/PickaxeAmount.text = str(GlobalVars.boughtMining + 1)
 	
 	
 	
-	$MainPlayer/Camera2D/Time/CoalAmount.text = str(GlobalVars.coal_collected)
+	$Control/Time/CoalAmount.text = str(GlobalVars.coal_collected)
 	label.text = "%02d:%02d" % time_left_countdown()
 
 func _on_timer_timeout() -> void:

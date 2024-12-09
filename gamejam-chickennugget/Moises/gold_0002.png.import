@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwi6op6dcs136"
-path="res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"
+uid="uid://8hhdsmt7txev"
+path="res://.godot/imported/gold_0002.png-1a987009e7457530c0feec9cb15e8be2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moises/coal.png"
-dest_files=["res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"]
+source_file="res://Moises/gold_0002.png"
+dest_files=["res://.godot/imported/gold_0002.png-1a987009e7457530c0feec9cb15e8be2.ctex"]
 
 [params]
 

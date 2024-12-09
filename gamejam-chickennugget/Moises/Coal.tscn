@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfcd03186y44"]
+
+[ext_resource type="Script" path="res://Moises/Coal.gd" id="1_hyelq"]
+[ext_resource type="Texture2D" uid="uid://bwi6op6dcs136" path="res://Moises/coal.png" id="1_moct7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r01me"]
+size = Vector2(61.5, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oq8pr"]
+size = Vector2(62, 58)
+
+[node name="Coal" type="StaticBody2D"]
+script = ExtResource("1_hyelq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_moct7")
+
+[node name="Item" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Item"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_r01me")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_oq8pr")
+
+[connection signal="body_entered" from="Item" to="." method="_on_item_body_entered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwi6op6dcs136"
-path="res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"
+uid="uid://dvlpivphbapc1"
+path="res://.godot/imported/Desert Wall Tileset.png-67cb50879592d66acc1e9765b66ac117.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moises/coal.png"
-dest_files=["res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"]
+source_file="res://Assets/Desert/Desert Wall Tileset.png"
+dest_files=["res://.godot/imported/Desert Wall Tileset.png-67cb50879592d66acc1e9765b66ac117.ctex"]
 
 [params]
 

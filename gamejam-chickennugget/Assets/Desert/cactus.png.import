@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwi6op6dcs136"
-path="res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"
+uid="uid://dbjw16yl6wpbj"
+path="res://.godot/imported/cactus.png-57abf650699713724c1dce02e073106e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moises/coal.png"
-dest_files=["res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"]
+source_file="res://Assets/Desert/cactus.png"
+dest_files=["res://.godot/imported/cactus.png-57abf650699713724c1dce02e073106e.ctex"]
 
 [params]
 

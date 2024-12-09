@@ -160,6 +160,7 @@ custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
 [node name="Resolution" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+visible = false
 texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_55wnk")

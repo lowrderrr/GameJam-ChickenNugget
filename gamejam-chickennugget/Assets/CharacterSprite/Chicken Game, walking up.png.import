@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwi6op6dcs136"
-path="res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"
+uid="uid://bo38ndoiuph6b"
+path="res://.godot/imported/Chicken Game, walking up.png-b6846b2f846f39969aab43b5b4fabc26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moises/coal.png"
-dest_files=["res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"]
+source_file="res://Assets/CharacterSprite/Chicken Game, walking up.png"
+dest_files=["res://.godot/imported/Chicken Game, walking up.png-b6846b2f846f39969aab43b5b4fabc26.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwi6op6dcs136"
-path="res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"
+uid="uid://b26b0db1jkedo"
+path="res://.godot/imported/shop_0001.png-47b3406e45438c77370948e42f00ee6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Moises/coal.png"
-dest_files=["res://.godot/imported/coal.png-b7a44f3179e69b709fc418557e8f6f2e.ctex"]
+source_file="res://Assets/Desert/shop_0001.png"
+dest_files=["res://.godot/imported/shop_0001.png-47b3406e45438c77370948e42f00ee6d.ctex"]
 
 [params]
 

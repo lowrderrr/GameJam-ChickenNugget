@@ -25,13 +25,13 @@ func _physics_process(delta):
 	elif thoughtBubble.frame == 0:
 		$CoalItem.visible = false
 		
-	$PointLight2D.energy = 0.5 + GlobalVars.addedLight
-	if Input.is_action_just_pressed("Map") && showMap == false:
-		showMap = true
-		$Camera2D/Map.visible = true
-	elif Input.is_action_just_pressed("Map") && showMap:
-		showMap = false
-		$Camera2D/Map.visible = false
+	#$PointLight2D.energy = 0.5 + GlobalVars.addedLight
+	#if Input.is_action_just_pressed("Map") && showMap == false:
+		#showMap = true
+		#$Camera2D/Map.visible = true
+	#elif Input.is_action_just_pressed("Map") && showMap:
+		#showMap = false
+		#$Camera2D/Map.visible = false
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -96,3 +96,11 @@ func _on_mines_or_spawn_area_thought_bubble(thinking) -> void:
 		thoughtBubble.play()
 	else:
 		thoughtBubble.stop()
+
+
+
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if(area.name == "Item"):
+		print("yur")
